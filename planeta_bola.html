@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeta Bola</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Função simples para atualizar as notícias
+        function atualizarNoticias() {
+            document.getElementById('latest-news').innerHTML = '<p>Atualizando as últimas notícias...</p>';
+            setTimeout(function() {
+                document.getElementById('latest-news').innerHTML = `
+                    <ul>
+                        <li>Notícia 1: Nova transferência no futebol europeu.</li>
+                        <li>Notícia 2: Basquete nacional registra recorde de pontos.</li>
+                        <li>Notícia 3: Atleta do vôlei faz estreia impressionante.</li>
+                    </ul>`;
+            }, 2000); // Simula um tempo de carregamento de 2 segundos
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Planeta Bola"> <!-- Insira o logo de bolas aqui -->
+            <h1>Planeta Bola</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Futebol</a></li>
+                <li><a href="#">Basquete</a></li>
+                <li><a href="#">Vôlei</a></li>
+                <li><a href="#">Esportes Olímpicos</a></li>
+                <li><a href="#">Opinião</a></li>
+                <li><a href="#">Resultados</a></li>
+                <li><a href="#">Contacte-nos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="featured-news">
+            <h2>Notícias em Destaque</h2>
+            <article>
+                <h3>Título da Notícia 1</h3>
+                <p>Pequena introdução ou chamada para o artigo completo.</p>
+                <p><strong>Categoria:</strong> Futebol | <strong>Data:</strong> 03/10/2024</p>
+            </article>
+            <article>
+                <h3>Título da Notícia 2</h3>
+                <p>Pequena introdução ou chamada para o artigo completo.</p>
+                <p><strong>Categoria:</strong> Basquete | <strong>Data:</strong> 03/10/2024</p>
+            </article>
+        </section>
+
+        <section class="latest-news">
+            <h2>Últimas Notícias</h2>
+            <div id="latest-news">
+                <ul>
+                    <li>Notícia 1: Resumo breve sobre o jogo de futebol da liga local.</li>
+                    <li>Notícia 2: Atualização da temporada de basquete.</li>
+                    <li>Notícia 3: Últimos resultados das competições olímpicas.</li>
+                    <li>Notícia 4: Novidades no mundo do vôlei.</li>
+                </ul>
+            </div>
+            <button onclick="atualizarNoticias()">Atualizar Notícias</button>
+        </section>
+
+        <section class="results">
+            <h2>Classificações e Resultados</h2>
+            <!-- Conteúdo -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright © 2024 Planeta Bola. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
